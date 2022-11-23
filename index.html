@@ -2,27 +2,13 @@
 <head>
   <title>1万分の1で背景変わるサイト</title>
 </head>
-
+<p align=center><font size="5">1万分の1の確率で<br>背景が変わります</font></p>
 <script>
 function lot() {
-  const data = {
-    '1等': 10,  // 10%
-    '2等': 20,  // 20%
-    '3等': 30, // 30%
-    // はずれ 40%
-  }
-  const rand = Math.floor(Math.random() * 100)
-  let result = 'はずれ'
-  let rate = 0
-  for (const prop in data) {
-    rate += data[prop]
-    if (rand <= rate) {
-      result = prop
-      break
+  const rand = Math.floor(Math.random() * 10000)
+    if (rand == 1) {
+           document.bgColor = "#0000ff";   
     }
   }
-  return result
-  // 1等や2等などを設定した確率で表示
-}
 </script>
 </html>
